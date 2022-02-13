@@ -1,4 +1,6 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
+import Loader from 'react-js-loader';
 
 export const StyledButton = styled.button`
 	border-radius: 5px;
@@ -13,12 +15,8 @@ export const StyledButton = styled.button`
 	border: none;
 	cursor: pointer;
 	margin: 15px;
-
-	// applying props with the help of single inline ternary conditions
-
 	border: 2px solid ${(props) => (props.secondary ? '#F7A072' : '#a1cdf1')};
 
-	// applying multiple props with the help of css helper
 	${(props) => {
 		return (
 			props.inverse &&
@@ -30,13 +28,23 @@ export const StyledButton = styled.button`
 	}}
 `;
 
-export const Button = ({ secondary, big, inverse, ...props }) => {
+export const Button = ({
+	secondary,
+	big,
+	inverse,
+	loading,
+	children,
+	...props
+}) => {
 	return (
-		<StyledButton
-			secondary={secondary}
-			big={big}
-			inverse={inverse}
-			{...props}
-		/>
+		<StyledButton secondary={secondary} big={big} inverse={inverse} {...props}>
+			{loading ? (
+				<Loader type="bubble-scale" bgColor={'#FFFFFF'} size={40} />
+			) : (
+				children
+			)}
+		</StyledButton>
 	);
 };
+
+export default Button;

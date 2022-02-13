@@ -39,6 +39,9 @@ export default function App() {
 				<Column four />
 				<Column four />
 			</Flex>
+
+			<h4>Button with loading</h4>
+			<Button loading />
 		</div>
 	);
 }
