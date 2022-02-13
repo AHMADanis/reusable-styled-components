@@ -4,15 +4,14 @@ import { Button } from './components/StyledButton';
 import { Container } from './components/Container';
 import { Flex, Column } from './components/Flex';
 import Card from './components/Card';
+import { Heading } from './components/Heading';
 
 export default function App() {
 	return (
 		<div className="App">
 			<GlobalStyle />
 			<Container fullVertical>
-				<Button secondary big>
-					Styled Components
-				</Button>
+				<Heading center> Styled Components h1</Heading>
 				<br />
 				<Button>Click me</Button>
 				<Button secondary>Click me</Button>
@@ -20,10 +19,13 @@ export default function App() {
 					Click me
 				</Button>
 			</Container>
-			<h4>Container</h4>
+
+			<Heading right h2>
+				Container h2
+			</Heading>
 			<Container full small></Container>
 
-			<h4>Flex</h4>
+			<Heading h3>Flex h3</Heading>
 			<Flex justifyAround>
 				<Button>one</Button>
 				<Button>two</Button>
@@ -43,9 +45,12 @@ export default function App() {
 				<Column four />
 			</Flex>
 
-			<h4>Button with loading</h4>
+			<Heading left h4>
+				{' '}
+				Button With Loader h4
+			</Heading>
 			<Button loading />
-			<h4>Cards</h4>
+			<Heading h5>Cards</Heading>
 			<Card>
 				Lorem Ipsum is simply dummy text of the printing and typesetting
 				industry. Lorem Ipsum has been the industry's standard dummy text ever
