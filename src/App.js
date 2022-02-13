@@ -1,11 +1,14 @@
 import './styles.css';
+import GlobalStyle from './components/GlobalStyle';
 import { Button } from './components/StyledButton';
 import { Container } from './components/Container';
 import { Flex, Column } from './components/Flex';
 import Card from './components/Card';
+
 export default function App() {
 	return (
 		<div className="App">
+			<GlobalStyle />
 			<Container fullVertical>
 				<Button secondary big>
 					Styled Components
