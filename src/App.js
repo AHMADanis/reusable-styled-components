@@ -2,7 +2,7 @@ import './styles.css';
 import { Button } from './components/StyledButton';
 import { Container } from './components/Container';
 import { Flex, Column } from './components/Flex';
-
+import Card from './components/Card';
 export default function App() {
 	return (
 		<div className="App">
@@ -42,6 +42,28 @@ export default function App() {
 
 			<h4>Button with loading</h4>
 			<Button loading />
+			<h4>Cards</h4>
+			<Card>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s, when an unknown printer took a galley of type and
+				scrambled it to make a type specimen book. It has survived not only five
+				centuries,
+			</Card>
+			<Card big>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s, when an unknown printer took a galley of type and
+				scrambled it to make a type specimen book. It has survived not only five
+				centuries,
+			</Card>
+			<Card primary delay={1500}>
+				Lorem Ipsum is simply dummy text of the printing and typesetting
+				industry. Lorem Ipsum has been the industry's standard dummy text ever
+				since the 1500s, when an unknown printer took a galley of type and
+				scrambled it to make a type specimen book. It has survived not only five
+				centuries,
+			</Card>
 		</div>
 	);
 }
